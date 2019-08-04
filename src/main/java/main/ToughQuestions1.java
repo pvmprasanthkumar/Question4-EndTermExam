@@ -1,5 +1,9 @@
 package main;
+import java.io.BufferedReader;
 
+import java.io.IOException;
+
+import java.io.InputStreamReader;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -75,6 +79,10 @@ class Account {
         System.out.println();
     }
     int debit(Integer debit) {
-         return bal = bal - debit;
+    	if(bal < debit)
+    		System.out.println("Insufficient balance");
+    	else
+    		bal = bal - debit;
+         return bal;
     }
 }
